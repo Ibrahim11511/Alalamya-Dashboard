@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: #000;
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
@@ -12,4 +11,8 @@
   -moz-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
+}
+
+:root {
+  --Primary-color: #1a1a4c
 }
