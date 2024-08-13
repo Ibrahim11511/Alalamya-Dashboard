@@ -1,3 +1,8 @@
+import Styles from "./dashBoard.module.css";
 export default function Dashboard() {
-  return <div className="">hello from dashboard</div>;
+  return (
+    <section className={Styles.dashboard}>
+      <h1>Add New invoice</h1>
+    </section>
+  );
 }

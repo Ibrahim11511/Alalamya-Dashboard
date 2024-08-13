@@ -1,0 +1,129 @@
+{
+    "companies": {
+        "elsewedy": [
+            {
+                "po": 20700500,
+                "products": [
+                    {
+                        "productID": 100,
+                        "productName": "cable Box",
+                        "productCode": "HCB-50020030",
+                        "quantity": 5,
+                        "price": 5000
+                    }
+                ]
+            },
+            {
+                "po": 20760507,
+                "products": [
+                    {
+                        "productID": 123,
+                        "productName": "clamp",
+                        "productCode": "HCB-50020030",
+                        "quantity": 5,
+                        "price": 5000
+                    },
+                    {
+                        "productID": 456,
+                        "productName": "left cable Box",
+                        "productCode": "HCB-50020030",
+                        "quantity": 5,
+                        "price": 5000
+                    },
+                    {
+                        "productID": 789,
+                        "productName": " right cable Box",
+                        "productCode": "HCB-50020030",
+                        "quantity": 5,
+                        "price": 5000
+                    }
+                ]
+            }
+        ]
+    },
+    "users": [
+        {
+            "userID": 1014642188,
+            "name": "Ibrahim Mohamed",
+            "userName": "ibrahim11511",
+            "userPassword": "01014642188",
+            "userPermissions": true
+        },
+        {
+            "userID": 1155034368,
+            "name": "Ibrahim Mohamed",
+            "userName": "ibrahim01155034368",
+            "userPassword": "01155034368",
+            "userPermissions": false
+        },
+        {
+            "userID": 1025004109,
+            "name": "Ibrahim Mohamed",
+            "userName": "ibrahim01025004109",
+            "userPassword": "01025004109",
+            "userPermissions": false
+        }
+    ],
+    "customers": {
+        "ahmed andel": [
+            {
+                "productID": 1,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            },
+            {
+                "productID": 2,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            },
+            {
+                "productID": 3,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            }
+        ],
+        "Mohamed Salem": [
+            {
+                "productID": 1,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            },
+            {
+                "productID": 2,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            },
+            {
+                "productID": 3,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            }
+        ],
+        "Ibrahim salama": [
+            {
+                "productID": 1,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            },
+            {
+                "productID": 2,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            },
+            {
+                "productID": 3,
+                "productName": "cbx",
+                "price": 1000,
+                "date": "17-10-2024"
+            }
+        ]
+    }
+}

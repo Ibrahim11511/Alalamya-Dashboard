@@ -4,6 +4,7 @@ import "@fontsource/roboto";
 import Root from "./Root";
 import ErrorPage from "./ErrorPage";
 import Dashboard from "./Pages/DashBoard/DashBoard";
+import System from "./Pages/System/System";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -14,6 +15,22 @@ function App() {
         {
           index: true,
           element: <Dashboard />,
+        },
+        {
+          path: "dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "companies",
+          element: <Dashboard />,
+        },
+        {
+          path: "customers",
+          element: <Dashboard />,
+        },
+        {
+          path: "system",
+          element: <System />,
         },
       ],
     },

@@ -4,30 +4,55 @@ import { MdDashboard } from "react-icons/md";
 import { FaBuilding } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
+import { GiGearHammer } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 export default function NavBar() {
+  const [activeAside, setActiveAside] = useState(false);
+
   return (
-    <nav className={Styles.navBar}>
-      <button className={Styles.openAndClose}>
-        <IoIosArrowForward />
-      </button>
-      <div className={Styles.header}>Alalamya</div>
-      <ul className={Styles.navBarList}>
-        <li className={Styles.navBarItem}>
-          <MdDashboard />
-          Dashboard
-        </li>
-        <li className={Styles.navBarItem}>
-          <FaBuilding />
-          Companies
-        </li>
-        <li className={Styles.navBarItem}>
-          <FaUsers />
-          Customers
-        </li>
-      </ul>
-      <div className={Styles.logo}>
-        <img src={LogoImage} alt="Logo" />
-      </div>
-    </nav>
+    <>
+      <div
+        className={`${Styles.overLayout} ${activeAside ? Styles.active : null}`}
+      ></div>
+      <nav className={`${Styles.navBar} ${activeAside ? Styles.active : null}`}>
+        <button
+          className={Styles.openAndClose}
+          onClick={() => setActiveAside(!activeAside)}
+        >
+          <IoIosArrowForward />
+        </button>
+        <div className={Styles.header}>Alalamya</div>
+        <ul className={Styles.navBarList}>
+          <li className={Styles.navBarItem}>
+            <NavLink to={"dashboard"}>
+              <MdDashboard />
+              Dashboard
+            </NavLink>
+          </li>
+          <li className={Styles.navBarItem}>
+            <NavLink to={"companies"}>
+              <FaBuilding />
+              Companies
+            </NavLink>
+          </li>
+          <li className={Styles.navBarItem}>
+            <NavLink to={"customers"}>
+              <FaUsers />
+              Customers
+            </NavLink>
+          </li>
+          <li className={Styles.navBarItem}>
+            <NavLink to={"system"}>
+              <GiGearHammer />
+              System
+            </NavLink>
+          </li>
+        </ul>
+        <div className={Styles.logo}>
+          <img src={LogoImage} alt="Logo" />
+        </div>
+      </nav>
+    </>
   );
 }
