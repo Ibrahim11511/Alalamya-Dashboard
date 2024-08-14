@@ -66,7 +66,7 @@
   width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .openAndClose {
     font-size: 30px;
     color: rebeccapurple;
@@ -105,11 +105,11 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    transform: translateY(-50%) translateX(-95%);
-    -webkit-transform: translateY(-50%) translateX(-95%);
-    -moz-transform: translateY(-50%) translateX(-95%);
-    -ms-transform: translateY(-50%) translateX(-95%);
-    -o-transform: translateY(-50%) translateX(-95%);
+    transform: translateY(-50%) translateX(-97%);
+    -webkit-transform: translateY(-50%) translateX(-97%);
+    -moz-transform: translateY(-50%) translateX(-97%);
+    -ms-transform: translateY(-50%) translateX(-97%);
+    -o-transform: translateY(-50%) translateX(-97%);
   }
 
   .navBar.active {
@@ -153,6 +153,7 @@
     -ms-transition: 0.1s;
     -o-transition: 0.1s;
   }
+
   .overLayout.active {
     transform: translateY(0);
     -webkit-transform: translateY(0);
@@ -160,5 +161,6 @@
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     user-select: none;
+    pointer-events: none;
   }
 }

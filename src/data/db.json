@@ -1,46 +1,4 @@
 {
-    "companies": {
-        "elsewedy": [
-            {
-                "po": 20700500,
-                "products": [
-                    {
-                        "productID": 100,
-                        "productName": "cable Box",
-                        "productCode": "HCB-50020030",
-                        "quantity": 5,
-                        "price": 5000
-                    }
-                ]
-            },
-            {
-                "po": 20760507,
-                "products": [
-                    {
-                        "productID": 123,
-                        "productName": "clamp",
-                        "productCode": "HCB-50020030",
-                        "quantity": 5,
-                        "price": 5000
-                    },
-                    {
-                        "productID": 456,
-                        "productName": "left cable Box",
-                        "productCode": "HCB-50020030",
-                        "quantity": 5,
-                        "price": 5000
-                    },
-                    {
-                        "productID": 789,
-                        "productName": " right cable Box",
-                        "productCode": "HCB-50020030",
-                        "quantity": 5,
-                        "price": 5000
-                    }
-                ]
-            }
-        ]
-    },
     "users": [
         {
             "userID": 1014642188,
@@ -125,5 +83,93 @@
                 "date": "17-10-2024"
             }
         ]
-    }
+    },
+    "companies": [
+        {
+            "companyName": "elsewedy",
+            "companyInvoices": [
+                {
+                    "po": 20700500,
+                    "products": [
+                        {
+                            "productID": 100,
+                            "productName": "cable Box",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        }
+                    ]
+                },
+                {
+                    "po": 20760507,
+                    "products": [
+                        {
+                            "productID": 123,
+                            "productName": "clamp",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        },
+                        {
+                            "productID": 456,
+                            "productName": "left cable Box",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        },
+                        {
+                            "productID": 789,
+                            "productName": " right cable Box",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "companyName": "fresh",
+            "companyInvoices": [
+                {
+                    "po": 20700500,
+                    "products": [
+                        {
+                            "productID": 100,
+                            "productName": "cable Box",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        }
+                    ]
+                },
+                {
+                    "po": 20760507,
+                    "products": [
+                        {
+                            "productID": 123,
+                            "productName": "clamp",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        },
+                        {
+                            "productID": 456,
+                            "productName": "left cable Box",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        },
+                        {
+                            "productID": 789,
+                            "productName": " right cable Box",
+                            "productCode": "HCB-50020030",
+                            "quantity": 5,
+                            "price": 5000
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
