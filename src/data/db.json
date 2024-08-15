@@ -22,68 +22,47 @@
             "userPermissions": false
         }
     ],
-    "customers": {
-        "ahmed andel": [
-            {
-                "productID": 1,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            },
-            {
-                "productID": 2,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            },
-            {
-                "productID": 3,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            }
-        ],
-        "Mohamed Salem": [
-            {
-                "productID": 1,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            },
-            {
-                "productID": 2,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            },
-            {
-                "productID": 3,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            }
-        ],
-        "Ibrahim salama": [
-            {
-                "productID": 1,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            },
-            {
-                "productID": 2,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            },
-            {
-                "productID": 3,
-                "productName": "cbx",
-                "price": 1000,
-                "date": "17-10-2024"
-            }
-        ]
-    },
+    "customers": [
+        {
+            "customersNAme": "Ahmed Andel",
+            "customersInvoices": [
+                {
+                    "productID": 1,
+                    "productName": "cbx",
+                    "price": 1000,
+                    "PricePaid": 1000,
+                    "OrderDate": "17-10-2024",
+                    "DateReceipt": "20-10-2024"
+                }
+            ]
+        },
+        {
+            "customersNAme": "mohamed Salem",
+            "customersInvoices": [
+                {
+                    "productID": 1,
+                    "productName": "cbx",
+                    "price": 1000,
+                    "PricePaid": 1000,
+                    "OrderDate": "17-10-2024",
+                    "DateReceipt": "20-10-2024"
+                }
+            ]
+        },
+        {
+            "customersNAme": "Ibrahim Mohamed",
+            "customersInvoices": [
+                {
+                    "productID": 1,
+                    "productName": "cbx",
+                    "price": 1000,
+                    "PricePaid": 1000,
+                    "OrderDate": "17-10-2024",
+                    "DateReceipt": "20-10-2024"
+                }
+            ]
+        }
+    ],
     "companies": [
         {
             "companyName": "elsewedy",

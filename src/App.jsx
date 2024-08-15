@@ -4,7 +4,7 @@ import "@fontsource/roboto";
 import Root from "./Root";
 import ErrorPage from "./ErrorPage";
 import Dashboard from "./Pages/DashBoard/DashBoard";
-import System from "./Pages/System/System";
+import System from "./Pages/System Page/System";
 function App() {
   const routes = createBrowserRouter([
     {
