@@ -1,0 +1,81 @@
+.systemPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Companies,
+.Users {
+  width: 90%;
+  padding: 20px;
+  border-bottom: 1px dashed #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newCompany {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.newCompany input {
+  width: 60%;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 10px 5px #10101031;
+}
+
+.addCompanyBtn,
+.addUserBtn {
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: var(--Primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.addCompanyBtn:hover,
+.addUserBtn:hover {
+  box-shadow: 0 0 3px 3px #10101031;
+  scale: 1.03;
+  background-color: #1a1a4cec;
+}
+
+.currentCompaniesContainer,
+.currentUser {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newUser input {
+  margin: 0 10px;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 10px 5px #10101031;
+}
