@@ -161,6 +161,5 @@
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     user-select: none;
-    pointer-events: none;
   }
 }
