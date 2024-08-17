@@ -3,13 +3,18 @@ import Styles from "./system.module.css";
 import { useEffect } from "react";
 import CompaniesSection from "../../Components/System/companies-section/CompaniesSection";
 import UsersSection from "../../Components/System/users-section/UsersSection";
+import { contextContextMenu } from "../../Context.js";
+import CustomersSection from "../../Components/System/customers-section/Customers";
 
 export default function System() {
+  const [newCompaniesInput, setNewCompaniesInput] = useState("");
   const [apiCompaniesResult, setApiCompaniesResult] = useState([]);
   const [apiUsersResult, setApiUsersResult] = useState([]);
-  // const [apiCustomersResult, setApiCustomersResult] = useState([]);
-  // const [newCompaniesInput, setNewCompaniesInput] = useState("");
-
+  const [apiCustomersResult, setApiCustomersResult] = useState([]);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [visible, setVisible] = useState(false);
+  const [contextPath, setContextPath] = useState("");
+  const [contextID, setContextID] = useState("");
   const getCompanies = async () => {
     const response = await fetch("http://localhost:3000/companies");
     const data = await response.json();
@@ -21,26 +26,40 @@ export default function System() {
     const data = await response.json();
     setApiUsersResult(() => data);
   };
-
-  // const getCustomers = async () => {
-  //   fetch("http://localhost:3000/customers")
-  //     .then((res) => res.json())
-  //     .then((customers) => {
-  //       customers.map((customer) => {
-  //         setApiCustomersResult((prev) => [...prev, customer.customersNAme]);
-  //       });
-  //     });
-  // };
+  const getCustomers = async () => {
+    const response = await fetch("http://localhost:3000/customers");
+    const data = await response.json();
+    setApiCustomersResult(() => data);
+  };
 
   useEffect(() => {
     getCompanies();
     getUsers();
-  }, []);
+    getCustomers();
+  }, [newCompaniesInput]);
 
   return (
     <main className={Styles.systemPage}>
-      <CompaniesSection apiCompaniesResult={apiCompaniesResult} />
-      <UsersSection apiUsersResult={apiUsersResult} />
+      <contextContextMenu.Provider
+        value={{
+          position,
+          setPosition,
+          visible,
+          setVisible,
+          contextPath,
+          setContextPath,
+          contextID,
+          setContextID,
+        }}
+      >
+        <CompaniesSection
+          apiCompaniesResult={apiCompaniesResult}
+          newCompaniesInput={newCompaniesInput}
+          setNewCompaniesInput={setNewCompaniesInput}
+        />
+        <UsersSection apiUsersResult={apiUsersResult} />
+        <CustomersSection apiCustomersResult={apiCustomersResult} />
+      </contextContextMenu.Provider>
     </main>
   );
 }

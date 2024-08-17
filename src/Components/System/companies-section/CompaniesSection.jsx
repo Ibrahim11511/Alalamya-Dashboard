@@ -1,8 +1,40 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import React, { useEffect } from "react";
 import Styles from "./CompaniesSection.module.css";
-export default function CompaniesSection({ apiCompaniesResult }) {
-  const [newCompaniesInput, setNewCompaniesInput] = useState([]);
+import { contextContextMenu } from "../../../Context";
+import { handelContextMenu } from "../../../global";
+export default function CompaniesSection({
+  apiCompaniesResult,
+  setNewCompaniesInput,
+  newCompaniesInput,
+}) {
+  const requestHeaders = { "Content-Type": "application/json" };
+  const requestBody = {
+    companyName: newCompaniesInput,
+    companyInvoices: [],
+  };
+  const { setPosition, setVisible, setContextPath, setContextID } =
+    React.useContext(contextContextMenu);
+
+  const handelSingle = (e, id) => {
+    handelContextMenu(e, id, setPosition, setVisible, setContextID);
+    setContextPath("companies");
+  };
+
+  const postAnewCompany = () => {
+    if (newCompaniesInput) {
+      fetch("http://localhost:3000/companies", {
+        method: "POST",
+        headers: requestHeaders,
+        body: JSON.stringify(requestBody),
+      })
+        .then((res) => res.json())
+        .then(console.log);
+    }
+    setNewCompaniesInput("");
+  };
+
+  useEffect(() => {}, []);
 
   return (
     <section className={Styles.Companies}>
@@ -13,11 +45,20 @@ export default function CompaniesSection({ apiCompaniesResult }) {
           value={newCompaniesInput}
           onChange={(e) => setNewCompaniesInput(e.target.value)}
         />
-        <button className={Styles.addCompanyBtn}>ADD</button>
+        <button
+          className={Styles.addCompanyBtn}
+          onClick={() => postAnewCompany()}
+        >
+          ADD
+        </button>
       </div>
       <div className={Styles.currentCompaniesContainer}>
         {apiCompaniesResult.map((company) => (
-          <span key={company.id} className={Styles.companyBox}>
+          <span
+            key={`company-key-${company.companyID}`}
+            onClick={(event) => handelSingle(event, company.companyID)}
+            className={Styles.companyBox}
+          >
             {company.companyName}
           </span>
         ))}

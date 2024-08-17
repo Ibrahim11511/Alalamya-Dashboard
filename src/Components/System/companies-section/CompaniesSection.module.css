@@ -1,17 +1,22 @@
-.Companies {
+.Companies,
+.Customers {
   width: 100%;
   padding-block: 20px;
   border-bottom: 1px dashed #000;
 }
-
-.newCompany {
+.Customers {
+  margin-bottom: 50px;
+}
+.newCompany,
+.newCustomer {
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(100px, auto);
   column-gap: 10px;
   margin-block: 10px;
 }
 
-.newCompany input {
+.newCompany input,
+.newCustomer input {
   font-size: 20px;
   padding: 10px 15px;
   border-radius: 10px;
@@ -22,7 +27,8 @@
   box-shadow: 0 0 10px 5px #10101031;
 }
 
-.addCompanyBtn {
+.addCompanyBtn,
+.addCustomerBtn {
   font-size: 20px;
   padding: 10px 15px;
   border-radius: 10px;
@@ -35,7 +41,8 @@
   cursor: pointer;
 }
 
-.currentCompaniesContainer {
+.currentCompaniesContainer,
+.currentCustomersContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +51,8 @@
   flex-wrap: wrap;
 }
 
-.companyBox {
+.companyBox,
+.customerBox {
   width: fit-content;
   padding: 10px 15px;
   background-color: #1a1a4c;
