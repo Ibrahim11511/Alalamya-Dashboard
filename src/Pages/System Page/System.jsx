@@ -8,6 +8,13 @@ import CustomersSection from "../../Components/System/customers-section/Customer
 
 export default function System() {
   const [newCompaniesInput, setNewCompaniesInput] = useState("");
+  const [newCustomersInput, setNewCustomersInput] = useState("");
+  const [newUserInput, setNewUserInput] = useState({
+    name: "",
+    userName: "",
+    password: "",
+    role: "",
+  });
   const [apiCompaniesResult, setApiCompaniesResult] = useState([]);
   const [apiUsersResult, setApiUsersResult] = useState([]);
   const [apiCustomersResult, setApiCustomersResult] = useState([]);
@@ -36,7 +43,7 @@ export default function System() {
     getCompanies();
     getUsers();
     getCustomers();
-  }, [newCompaniesInput]);
+  }, [newCompaniesInput, newCustomersInput]);
 
   return (
     <main className={Styles.systemPage}>
@@ -57,8 +64,16 @@ export default function System() {
           newCompaniesInput={newCompaniesInput}
           setNewCompaniesInput={setNewCompaniesInput}
         />
-        <UsersSection apiUsersResult={apiUsersResult} />
-        <CustomersSection apiCustomersResult={apiCustomersResult} />
+        <UsersSection
+          apiUsersResult={apiUsersResult}
+          newUserInput={newUserInput}
+          setNewUserInput={setNewUserInput}
+        />
+        <CustomersSection
+          apiCustomersResult={apiCustomersResult}
+          newCustomersInput={newCustomersInput}
+          setNewCustomersInput={setNewCustomersInput}
+        />
       </contextContextMenu.Provider>
     </main>
   );

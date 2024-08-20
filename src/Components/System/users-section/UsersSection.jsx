@@ -1,17 +1,26 @@
 /* eslint-disable react/prop-types */
-import ContextMenu from "../../Context Menu/ContextMenu";
 import Styles from "./users.module.css";
 import { contextContextMenu } from "../../../Context";
 import { handelContextMenu } from "../../../global";
 import React from "react";
-export default function UsersSection({ apiUsersResult }) {
+export default function UsersSection({
+  apiUsersResult,
+  newUserInput,
+  setNewUserInput,
+}) {
   const { setPosition, setVisible, setContextPath, setContextID } =
     React.useContext(contextContextMenu);
 
-  function handelNewUser(e) {
-    e.preventDefault();
-  }
-
+  const requestHeaders = { "Content-Type": "application/json" };
+  const postAnewUser = () => {
+    if (newUserInput.name) {
+      fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: requestHeaders,
+        body: JSON.stringify(newUserInput),
+      });
+    }
+  };
   const handelSingle = (e, id) => {
     handelContextMenu(e, id, setPosition, setVisible, setContextID);
     setContextPath("users");
@@ -19,21 +28,47 @@ export default function UsersSection({ apiUsersResult }) {
 
   return (
     <section className={Styles.customersSection}>
-      <ContextMenu />
       <div className={Styles.newUser}>
         <form>
-          <input type="text" placeholder="Name..." />
-          <input type="text" placeholder="User Name..." />
-          <input type="text" placeholder="Password..." />
-          <select>
-            <option defaultValue disabled>
-              Level
-            </option>
-            <option value="volvo">Admin</option>
-            <option value="saab">Moderator</option>
-            <option value="mercedes">User</option>
+          <input
+            type="text"
+            placeholder="Name..."
+            value={newUserInput.name}
+            onChange={(e) =>
+              setNewUserInput((prev) => ({ ...prev, name: e.target.value }))
+            }
+          />
+          <input
+            type="text"
+            placeholder="User Name..."
+            onChange={(e) =>
+              setNewUserInput((prev) => ({
+                ...prev,
+                userName: e.target.value,
+              }))
+            }
+          />
+          <input
+            type="text"
+            placeholder="Password..."
+            onChange={(e) =>
+              setNewUserInput((prev) => ({
+                ...prev,
+                password: e.target.value,
+              }))
+            }
+          />
+          <select
+            onChange={(e) =>
+              setNewUserInput((prev) => ({ ...prev, role: e.target.value }))
+            }
+          >
+            <option disabled>Level</option>
+            <option value="admin">Admin</option>
+            <option value="moderator">Moderator</option>
+            <option value="user">User</option>
           </select>
-          <input type="submit" value={"Add"} onClick={handelNewUser} />
+          <input type="submit" value={"Add"} onClick={postAnewUser} />
           <input type="reset" value={"reset"} />
         </form>
       </div>
@@ -44,7 +79,7 @@ export default function UsersSection({ apiUsersResult }) {
             onClick={(event) => handelSingle(event, user.id)}
             className={Styles.userBox}
           >
-            {user.firstName} {user.lastName}
+            {user.name}
           </span>
         ))}
       </div>

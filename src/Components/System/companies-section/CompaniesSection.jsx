@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Styles from "./CompaniesSection.module.css";
 import { contextContextMenu } from "../../../Context";
 import { handelContextMenu } from "../../../global";
+// import ContextMenu from "../../Context Menu/ContextMenu";
 export default function CompaniesSection({
   apiCompaniesResult,
   setNewCompaniesInput,
@@ -55,8 +56,8 @@ export default function CompaniesSection({
       <div className={Styles.currentCompaniesContainer}>
         {apiCompaniesResult.map((company) => (
           <span
-            key={`company-key-${company.companyID}`}
-            onClick={(event) => handelSingle(event, company.companyID)}
+            key={`company-key-${company.id}`}
+            onClick={(event) => handelSingle(event, company.id)}
             className={Styles.companyBox}
           >
             {company.companyName}
