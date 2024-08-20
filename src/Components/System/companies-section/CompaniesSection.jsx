@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Styles from "./CompaniesSection.module.css";
 import { contextContextMenu } from "../../../Context";
 import { handelContextMenu } from "../../../global";
-// import ContextMenu from "../../Context Menu/ContextMenu";
 export default function CompaniesSection({
   apiCompaniesResult,
   setNewCompaniesInput,

@@ -5,9 +5,38 @@ import { MdDeleteForever } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import React from "react";
 import { contextContextMenu } from "../../Context";
+import Swal from "sweetalert2";
 export default function ContextMenu() {
   const { position, visible, contextPath, contextID } =
     React.useContext(contextContextMenu);
+
+  const handelDeleteRequest = (path, id) => {
+    fetch(`http://localhost:3000/${path}/${id}`, {
+      method: "DELETE",
+    });
+  };
+
+  const handelDeleteBtnClick = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: `You will delete from ${contextPath}`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        handelDeleteRequest(contextPath, contextID);
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  };
 
   return (
     <div
@@ -31,7 +60,7 @@ export default function ContextMenu() {
             {`Global ${contextPath}'s Page`}
           </Link>
         </li>
-        <li className={Styles.link}>
+        <li className={Styles.link} onClick={handelDeleteBtnClick}>
           <Link>
             <MdDeleteForever />
             Delete

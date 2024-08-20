@@ -40,7 +40,7 @@ export default function CustomersSection({
       <div className={Styles.newCustomer}>
         <input
           type="text"
-          placeholder="Add New Company"
+          placeholder="Add New Customer"
           value={newCustomersInput}
           onChange={(e) => setNewCustomersInput(e.target.value)}
         />

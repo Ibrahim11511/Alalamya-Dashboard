@@ -9,6 +9,7 @@
 }
 
 .newUser form {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@
 }
 
 .newUser form > * {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   padding: 10px 15px;
   font-size: 18px;
   border-radius: 5px;
@@ -27,6 +28,13 @@
   -o-border-radius: 5px;
 }
 
+.newUser form [name="userName"] {
+  text-transform: lowercase;
+}
+
+.newUser form [name="name"] {
+  text-transform: capitalize;
+}
 .newUser form > :focus {
   box-shadow: 0 0 10px 5px #10101031;
 }
@@ -34,7 +42,7 @@
 .newUser form [type="submit"],
 .newUser form [type="reset"] {
   font-size: 20px;
-  padding: 10px 15px;
+  padding: 10px 25px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -44,6 +52,7 @@
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .currentUsers {

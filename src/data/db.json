@@ -1,117 +1,34 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "f31d",
+      "name": "asd",
+      "userName": "asd",
+      "password": "asd",
+      "role": "user"
+    }
+  ],
   "customers": [
     {
-      "customerName": "Ahmed Andel",
-      "id": "1",
-      "customersInvoices": [
-        {
-          "id": 1,
-          "productName": "cbx",
-          "price": 1000,
-          "PricePaid": 1000,
-          "OrderDate": "17-10-2024",
-          "DateReceipt": "20-10-2024"
-        }
-      ]
-    },
-    {
-      "customerName": "7enkesh",
-      "id": "2",
-      "customersInvoices": [
-        {
-          "id": 1,
-          "productName": "cbx",
-          "price": 1000,
-          "PricePaid": 1000,
-          "OrderDate": "17-10-2024",
-          "DateReceipt": "20-10-2024"
-        }
-      ]
-    },
-    {
-      "customerName": "muhsen",
-      "id": "3",
-      "customersInvoices": [
-        {
-          "id": 1,
-          "productName": "cbx",
-          "price": 1000,
-          "PricePaid": 1000,
-          "OrderDate": "17-10-2024",
-          "DateReceipt": "20-10-2024"
-        }
-      ]
+      "id": "8515",
+      "customerName": "asd",
+      "customerNameInvoices": []
     }
   ],
   "companies": [
     {
-      "companyName": "elsewedy",
-      "id": "1",
-      "companyInvoices": [
-        {
-          "po": 20700500,
-          "products": [
-            {
-              "id": 100,
-              "productName": "cable Box",
-              "productCode": "HCB-50020030",
-              "quantity": 5,
-              "price": 5000
-            }
-          ]
-        },
-        {
-          "po": 20760507,
-          "products": [
-            {
-              "id": 123,
-              "productName": "clamp",
-              "productCode": "HCB-50020030",
-              "quantity": 5,
-              "price": 5000
-            },
-            {
-              "id": 456,
-              "productName": "left cable Box",
-              "productCode": "HCB-50020030",
-              "quantity": 5,
-              "price": 5000
-            },
-            {
-              "id": 789,
-              "productName": " right cable Box",
-              "productCode": "HCB-50020030",
-              "quantity": 5,
-              "price": 5000
-            }
-          ]
-        }
-      ]
-    },
-    {
+      "id": "99f1",
       "companyName": "fresh",
-      "id": "2",
       "companyInvoices": []
     },
     {
-      "id": "c3c8",
-      "companyName": "soker",
+      "id": "1a2d",
+      "companyName": "hamada",
       "companyInvoices": []
     },
     {
-      "id": "ae0f",
-      "companyName": "muhsen",
-      "companyInvoices": []
-    },
-    {
-      "id": "c31b",
-      "companyName": "Ibrahim ",
-      "companyInvoices": []
-    },
-    {
-      "id": "47d6",
-      "companyName": "saber",
+      "id": "842c",
+      "companyName": "sjsjsj",
       "companyInvoices": []
     }
   ]

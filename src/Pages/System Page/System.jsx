@@ -13,7 +13,7 @@ export default function System() {
     name: "",
     userName: "",
     password: "",
-    role: "",
+    role: "user",
   });
   const [apiCompaniesResult, setApiCompaniesResult] = useState([]);
   const [apiUsersResult, setApiUsersResult] = useState([]);
@@ -43,7 +43,7 @@ export default function System() {
     getCompanies();
     getUsers();
     getCustomers();
-  }, [newCompaniesInput, newCustomersInput]);
+  }, [newCompaniesInput, newCustomersInput, newUserInput]);
 
   return (
     <main className={Styles.systemPage}>
