@@ -6,6 +6,7 @@ import { FaUsers } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { GiGearHammer } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
+import { PiGearFineFill } from "react-icons/pi";
 import { useState } from "react";
 export default function NavBar() {
   const [activeAside, setActiveAside] = useState(false);
@@ -27,7 +28,7 @@ export default function NavBar() {
           <li className={Styles.navBarItem}>
             <NavLink to={"dashboard"}>
               <MdDashboard />
-              Dashboard
+              Dashboardv
             </NavLink>
           </li>
           <li className={Styles.navBarItem}>
@@ -46,6 +47,12 @@ export default function NavBar() {
             <NavLink to={"system"}>
               <GiGearHammer />
               System
+            </NavLink>
+          </li>
+          <li className={Styles.navBarItem}>
+            <NavLink to={"work"}>
+              <PiGearFineFill />
+              Work
             </NavLink>
           </li>
         </ul>
