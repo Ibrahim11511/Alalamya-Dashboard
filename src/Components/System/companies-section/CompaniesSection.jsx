@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from "react";
 import Styles from "./CompaniesSection.module.css";
 import { contextContextMenu } from "../../../Context";
 import { handelContextMenu } from "../../../global";
+import React from "react";
 export default function CompaniesSection({
   apiCompaniesResult,
   setNewCompaniesInput,
@@ -33,8 +33,6 @@ export default function CompaniesSection({
     }
     setNewCompaniesInput("");
   };
-
-  useEffect(() => {}, []);
 
   return (
     <section className={Styles.Companies}>

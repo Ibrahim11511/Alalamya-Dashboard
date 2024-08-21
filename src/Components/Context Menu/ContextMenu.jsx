@@ -6,15 +6,10 @@ import { FaUsers } from "react-icons/fa";
 import React from "react";
 import { contextContextMenu } from "../../Context";
 import Swal from "sweetalert2";
+import { handelDeleteRequest } from "../../global";
 export default function ContextMenu() {
   const { position, visible, contextPath, contextID } =
     React.useContext(contextContextMenu);
-
-  const handelDeleteRequest = (path, id) => {
-    fetch(`http://localhost:3000/${path}/${id}`, {
-      method: "DELETE",
-    });
-  };
 
   const handelDeleteBtnClick = () => {
     Swal.fire({
@@ -26,7 +21,6 @@ export default function ContextMenu() {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      console.log(result);
       if (result.isConfirmed) {
         handelDeleteRequest(contextPath, contextID);
         Swal.fire({

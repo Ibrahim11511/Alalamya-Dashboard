@@ -13,3 +13,8 @@ export const handelContextMenu = (
     visibilitySetter(false);
   }, 1500);
 };
+export const handelDeleteRequest = (path, id) => {
+  fetch(`http://localhost:3000/${path}/${id}`, {
+    method: "DELETE",
+  });
+};

@@ -13,7 +13,7 @@ export default function System() {
     name: "",
     userName: "",
     password: "",
-    role: "user",
+    role: "",
   });
   const [apiCompaniesResult, setApiCompaniesResult] = useState([]);
   const [apiUsersResult, setApiUsersResult] = useState([]);

@@ -1,35 +1,13 @@
 {
   "users": [
     {
-      "id": "f31d",
+      "id": "b0ff",
       "name": "asd",
       "userName": "asd",
       "password": "asd",
-      "role": "user"
+      "role": "moderator"
     }
   ],
-  "customers": [
-    {
-      "id": "8515",
-      "customerName": "asd",
-      "customerNameInvoices": []
-    }
-  ],
-  "companies": [
-    {
-      "id": "99f1",
-      "companyName": "fresh",
-      "companyInvoices": []
-    },
-    {
-      "id": "1a2d",
-      "companyName": "hamada",
-      "companyInvoices": []
-    },
-    {
-      "id": "842c",
-      "companyName": "sjsjsj",
-      "companyInvoices": []
-    }
-  ]
+  "customers": [],
+  "companies": []
 }

@@ -5,6 +5,7 @@ import Root from "./Root";
 import ErrorPage from "./ErrorPage";
 import Dashboard from "./Pages/DashBoard/DashBoard";
 import System from "./Pages/System Page/System";
+import CustomerPage from "./Pages/Customers Page/CustomerPage";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ function App() {
         },
         {
           path: "customers",
-          element: <Dashboard />,
+          element: <CustomerPage />,
         },
         {
           path: "system",
