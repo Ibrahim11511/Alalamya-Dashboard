@@ -6,6 +6,7 @@ import ErrorPage from "./ErrorPage";
 import Dashboard from "./Pages/DashBoard/DashBoard";
 import System from "./Pages/System Page/System";
 import CustomerPage from "./Pages/Customers Page/CustomerPage";
+import WorkPage from "./Pages/Work Page/WorkPage";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ function App() {
         {
           path: "system",
           element: <System />,
+        },
+        {
+          path: "work",
+          element: <WorkPage />,
         },
       ],
     },
