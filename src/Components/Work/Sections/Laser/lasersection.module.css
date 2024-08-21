@@ -1,95 +1,111 @@
 * {
-    color: var(--Primary-color);
+  color: var(--Primary-color);
 }
 
 .laserSection {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .laserSection h2 {
-    text-align: center;
-    margin-top: 30px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: 0 0 10px #6b6b6b;
+  text-align: center;
+  width: 350px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 0 0 10px #6b6b6b;
+  text-wrap: wrap;
 }
 
 .laserSection form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 10px auto;
-    max-width: 70%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  max-width: 70%;
+  width: 100%;
 }
 
-.laserSection form>* {
-    padding: 10px 15px;
-    flex: 1 0 auto;
-    border: 1px solid #10101030;
-    font-size: 18px;
+.laserSection form > * {
+  padding: 10px 15px;
+  flex: 1 0 auto;
+  border: 1px solid #10101030;
+  font-size: 18px;
 }
 
-.laserSection form>*:is(:hover, :focus) {
-    box-shadow: 0 0 10px #12121257;
+.laserSection form > *:is(:hover, :focus) {
+  box-shadow: 0 0 10px #12121257;
 }
 
 .laserSection form [type="submit"],
 .laserSection form [type="reset"] {
-    background-color: var(--Primary-color);
-    color: #FFF;
-    cursor: pointer;
-    border: 1px solid #FFF;
+  background-color: var(--Primary-color);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
 }
 
-.laserSection form>:first-child {
-    border-left: 1px solid #10101030;
+.laserSection form > :first-child {
+  border-left: 1px solid #10101030;
 }
 
 .styledTable {
-    border-collapse: collapse;
-    margin: 30px auto;
-    max-width: 70%;
-    width: 100%;
-    box-shadow: 0 0 20px #1414142c;
+  border-collapse: collapse;
+  margin: 30px auto;
+  max-width: 70%;
+  width: 100%;
+  box-shadow: 0 0 20px #1414142c;
 }
 
 .styledTable thead tr {
-    background-color: var(--Primary-color);
-    color: #FFF;
-    padding-inline: 10px;
+  background-color: var(--Primary-color);
+  color: #fff;
+  padding-inline: 10px;
 }
 
 .styledTable th {
-    color: #FFF;
+  color: #fff;
 }
 
 .styledTable th,
 .styledTable td {
-    padding-block: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    width: 300px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  width: 300px;
 }
 
 .styledTable tbody tr {
-    border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 .styledTable tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .styledTable tbody tr:last-of-type {
-    border-bottom: 2px solid var(--Primary-color);
+  border-bottom: 2px solid var(--Primary-color);
 }
 
 .styledTable tbody tr.activeRow {
-    font-weight: bold;
-    color: #009879;
+  font-weight: bold;
+  color: #009879;
+}
+
+@media (max-width: 600px) {
+  .styledTable {
+    transform: scaleX(0.8);
+    -webkit-transform: scaleX(0.8);
+    -moz-transform: scaleX(0.8);
+    -ms-transform: scaleX(0.8);
+    -o-transform: scaleX(0.8);
+  }
 }

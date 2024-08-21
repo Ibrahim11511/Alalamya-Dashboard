@@ -6,8 +6,108 @@
       "userName": "asd",
       "password": "asd",
       "role": "moderator"
+    },
+    {
+      "id": "f40a",
+      "name": "Ibrahim Mohamed",
+      "userName": "asd",
+      "password": "asda",
+      "role": "moderator"
     }
   ],
-  "customers": [],
-  "companies": []
+  "customers": [
+    {
+      "id": "14a8",
+      "customerName": "mohamed badran",
+      "customerInvoices": []
+    },
+    {
+      "id": "847d",
+      "customerName": "hasen",
+      "customerInvoices": []
+    },
+    {
+      "id": "426b",
+      "customerName": "ibrahim mohamed",
+      "customerInvoices": []
+    },
+    {
+      "id": "c853",
+      "customerName": "muhsen",
+      "customerInvoices": []
+    },
+    {
+      "id": "fd58",
+      "customerName": "saber",
+      "customerInvoices": []
+    },
+    {
+      "id": "17ab",
+      "customerName": "abdelrahman",
+      "customerInvoices": []
+    }
+  ],
+  "companies": [],
+  "laserStatement": [
+    {
+      "id": "9b45",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "10",
+      "sheetAmount": "10",
+      "customerName": "hasen",
+      "materialType": "10",
+      "sheetDimension": "10"
+    },
+    {
+      "id": "b652",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "55",
+      "sheetAmount": "55",
+      "customerName": "mohamed badran",
+      "materialType": "55",
+      "sheetDimension": "55"
+    },
+    {
+      "id": "f54a",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "77",
+      "sheetAmount": "77",
+      "customerName": "saber",
+      "materialType": "77",
+      "sheetDimension": "77"
+    },
+    {
+      "id": "bac0",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "88",
+      "sheetAmount": "88",
+      "customerName": "abdelrahman",
+      "materialType": "88",
+      "sheetDimension": "88"
+    },
+    {
+      "id": "4cb7",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "10",
+      "sheetAmount": "10",
+      "customerName": "muhsen",
+      "materialType": "10",
+      "sheetDimension": "10"
+    },
+    {
+      "id": "349d",
+      "time": "66",
+      "date": "22/08/2024",
+      "thickness": "66",
+      "sheetAmount": "66",
+      "customerName": "hasen",
+      "materialType": "66",
+      "sheetDimension": "66"
+    }
+  ]
 }

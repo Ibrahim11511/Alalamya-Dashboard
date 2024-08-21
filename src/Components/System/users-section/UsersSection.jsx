@@ -2,7 +2,11 @@
 /* eslint-disable react/prop-types */
 import Styles from "./users.module.css";
 import { contextContextMenu } from "../../../Context";
-import { handelContextMenu } from "../../../global";
+import {
+  allValuesPresent,
+  handelContextMenu,
+  handelInputsGroupChange,
+} from "../../../global";
 import React from "react";
 export default function UsersSection({
   apiUsersResult,
@@ -11,17 +15,6 @@ export default function UsersSection({
 }) {
   const { setPosition, setVisible, setContextPath, setContextID } =
     React.useContext(contextContextMenu);
-
-  function allValuesPresent(obj) {
-    for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        if (obj[key] === undefined || obj[key] === null || obj[key] === "") {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
 
   const requestHeaders = { "Content-Type": "application/json" };
   const postAnewUser = (e) => {
@@ -42,10 +35,6 @@ export default function UsersSection({
     setContextPath("users");
   };
 
-  const handelUsersInputsChange = (e) => {
-    setNewUserInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
   return (
     <section className={Styles.customersSection}>
       <div className={Styles.newUser}>
@@ -55,24 +44,24 @@ export default function UsersSection({
             placeholder="Name..."
             name="name"
             value={newUserInput.name}
-            onChange={(e) => handelUsersInputsChange(e)}
+            onChange={(e) => handelInputsGroupChange(e, setNewUserInput)}
           />
           <input
             type="text"
             placeholder="User Name..."
             name="userName"
             value={newUserInput.userName}
-            onChange={(e) => handelUsersInputsChange(e)}
+            onChange={(e) => handelInputsGroupChange(e, setNewUserInput)}
           />
           <input
             type="text"
             placeholder="Password..."
             name="password"
             value={newUserInput.password}
-            onChange={(e) => handelUsersInputsChange(e)}
+            onChange={(e) => handelInputsGroupChange(e, setNewUserInput)}
           />
           <select
-            onChange={(e) => handelUsersInputsChange(e)}
+            onChange={(e) => handelInputsGroupChange(e, setNewUserInput)}
             value={newUserInput.role}
             name="role"
           >

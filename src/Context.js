@@ -1,4 +1,5 @@
 import React from "react";
 
 const contextContextMenu = React.createContext();
-export { contextContextMenu };
+const contextWorkPage = React.createContext();
+export { contextContextMenu, contextWorkPage };

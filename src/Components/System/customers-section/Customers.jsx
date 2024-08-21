@@ -18,8 +18,8 @@ export default function CustomersSection({
   };
   const requestHeaders = { "Content-Type": "application/json" };
   const requestBody = {
-    customerName: newCustomersInput,
-    customerNameInvoices: [],
+    customerName: newCustomersInput.toLowerCase(),
+    customerInvoices: [],
   };
   const postAnewCustomer = () => {
     if (newCustomersInput) {
@@ -39,6 +39,7 @@ export default function CustomersSection({
       <ContextMenu />
       <div className={Styles.newCustomer}>
         <input
+          style={{ textTransform: "capitalize" }}
           type="text"
           placeholder="Add New Customer"
           value={newCustomersInput}

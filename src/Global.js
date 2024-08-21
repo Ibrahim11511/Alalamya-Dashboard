@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 export const handelContextMenu = (
   event,
   contentID,
@@ -13,8 +14,43 @@ export const handelContextMenu = (
     visibilitySetter(false);
   }, 1500);
 };
+
 export const handelDeleteRequest = (path, id) => {
   fetch(`http://localhost:3000/${path}/${id}`, {
     method: "DELETE",
   });
 };
+
+export function allValuesPresent(obj) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      if (obj[key] === undefined || obj[key] === null || obj[key] === "") {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+export const handelInputsGroupChange = (e, setterFunction) => {
+  setterFunction((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+};
+
+export function capitalizeText(text) {
+  return text
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // capitalize first letter and lowercase the rest
+    .join(" ");
+}
+
+export function getDate() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1;
+  let dd = today.getDate();
+
+  if (dd < 10) dd = "0" + dd;
+  if (mm < 10) mm = "0" + mm;
+
+  return dd + "/" + mm + "/" + yyyy;
+}
