@@ -37,6 +37,11 @@ export default function LaserSection({
         );
     }
   };
+
+  const handelStateClick = (state) => {
+    console.log(state);
+  };
+
   return (
     <section className={Styles.laserSection}>
       <h2>Laser job statement</h2>
@@ -122,15 +127,18 @@ export default function LaserSection({
           </tr>
         </thead>
         <tbody>
-          {laserStatementData.map((stat) => (
-            <tr key={`laser-stat-key-${stat.id}`}>
-              <td>{stat.date}</td>
-              <td>{capitalizeText(stat.customerName)}</td>
-              <td>{`${stat.time} min`}</td>
-              <td>{stat.thickness}</td>
-              <td>{stat.materialType}</td>
-              <td>{stat.sheetAmount}</td>
-              <td>{stat.sheetDimension}</td>
+          {laserStatementData.map((state) => (
+            <tr
+              key={`laser-state-key-${state.id}`}
+              onClick={() => handelStateClick(state)}
+            >
+              <td>{state.date}</td>
+              <td>{capitalizeText(state.customerName)}</td>
+              <td>{`${state.time} min`}</td>
+              <td>{state.thickness}</td>
+              <td>{state.materialType}</td>
+              <td>{state.sheetAmount}</td>
+              <td>{state.sheetDimension}</td>
             </tr>
           ))}
         </tbody>

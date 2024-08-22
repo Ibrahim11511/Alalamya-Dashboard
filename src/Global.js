@@ -37,9 +37,9 @@ export const handelInputsGroupChange = (e, setterFunction) => {
 };
 
 export function capitalizeText(text) {
-  return text
+  return new String(text)
     .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // capitalize first letter and lowercase the rest
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 }
 

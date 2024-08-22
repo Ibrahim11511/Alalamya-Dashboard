@@ -108,6 +108,55 @@
       "customerName": "hasen",
       "materialType": "66",
       "sheetDimension": "66"
+    },
+    {
+      "id": "9d2a",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "10",
+      "sheetAmount": "2",
+      "customerName": "ibrahim mohamed",
+      "materialType": "Black",
+      "sheetDimension": "100*500"
+    },
+    {
+      "id": "52a6",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "10",
+      "sheetAmount": "10000",
+      "customerName": "mohamed badran",
+      "materialType": "1000000",
+      "sheetDimension": "10000000"
+    },
+    {
+      "id": "4943",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "99999",
+      "sheetAmount": "99999",
+      "customerName": "hasen",
+      "materialType": "99999",
+      "sheetDimension": "99999"
+    },
+    {
+      "id": "4312",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "9999",
+      "sheetAmount": "99999",
+      "materialType": "99999",
+      "sheetDimension": "9999"
+    },
+    {
+      "id": "7dcb",
+      "time": 5,
+      "date": "22/08/2024",
+      "thickness": "11",
+      "sheetAmount": "1",
+      "customerName": "mohamed badran",
+      "materialType": "11",
+      "sheetDimension": "1"
     }
   ]
 }
