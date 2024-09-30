@@ -1,4 +1,4 @@
-/* eslint-disable no-prototype-builtins */
+// /* eslint-disable no-prototype-builtins */
 /* eslint-disable react/prop-types */
 import Styles from "./users.module.css";
 import { contextContextMenu } from "../../../Context";

@@ -24,7 +24,12 @@ export const handelDeleteRequest = (path, id) => {
 export function allValuesPresent(obj) {
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      if (obj[key] === undefined || obj[key] === null || obj[key] === "") {
+      if (
+        obj[key] == undefined ||
+        obj[key] == null ||
+        obj[key] == "" ||
+        obj[key] == "0"
+      ) {
         return false;
       }
     }

@@ -3,9 +3,13 @@ import LaserContainer from "../../Components/Work/Containers/Laser/LaserContaine
 import { contextWorkPage } from "../../Context";
 export default function WorkPage() {
   const [customers, setCustomers] = useState([]);
+  const [refreshData, setRefreshData] = useState(true);
+
   return (
     <div>
-      <contextWorkPage.Provider value={{ customers, setCustomers }}>
+      <contextWorkPage.Provider
+        value={{ customers, setCustomers, refreshData, setRefreshData }}
+      >
         <LaserContainer />
       </contextWorkPage.Provider>
     </div>

@@ -68,6 +68,7 @@
   background-color: var(--Primary-color);
   color: #fff;
   padding-inline: 10px;
+  cursor: pointer;
 }
 
 .styledTable th {
@@ -81,6 +82,7 @@
   font-size: 18px;
   font-weight: 400;
   width: 300px;
+  cursor: pointer;
 }
 
 .styledTable tbody tr {
@@ -90,6 +92,22 @@
 .styledTable tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
+.styledTable tbody tr:nth-of-type(odd) {
+  background-color: #dddddd;
+}
+
+.styledTable tbody tr:hover {
+  background-color: var(--Primary-color);
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+
+.styledTable tbody tr:hover td {
+  color: #fff;
+}
 
 .styledTable tbody tr:last-of-type {
   border-bottom: 2px solid var(--Primary-color);
@@ -98,14 +116,4 @@
 .styledTable tbody tr.activeRow {
   font-weight: bold;
   color: #009879;
-}
-
-@media (max-width: 600px) {
-  .styledTable {
-    transform: scaleX(0.8);
-    -webkit-transform: scaleX(0.8);
-    -moz-transform: scaleX(0.8);
-    -ms-transform: scaleX(0.8);
-    -o-transform: scaleX(0.8);
-  }
 }
